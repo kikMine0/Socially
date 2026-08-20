@@ -1,10 +1,10 @@
 # INFO CONFIG
 # MiniMessage Support & Chat color codes are supported
+# TL;DR
+# To add a clickable message, look the line below
+# <click:open_url:'URL'> MESSAGE </click>
 #
-#
-#
-#
-commands:
+socials:
   discord:
     - "Entra ora nel <blue>discord&r! "
     - "<click:open_url:'INSERT.URL.HERE'>https://discord.gg/INVITE</click>"
