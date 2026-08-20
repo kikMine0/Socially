@@ -14,6 +14,6 @@ public final class Socially extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        saveConfig();
     }
 }
