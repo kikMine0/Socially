@@ -3,9 +3,11 @@ package kik.socially;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandMap;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.Plugin;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class CommandManager {
@@ -20,6 +22,11 @@ public class CommandManager {
 
     }
     public void registraCMDS(){
+        ConfigurationSection entrate = config.getSocials();
+        if (entrate == null) return;
 
+        for (String comando : entrate.getKeys(false)){
+            List<String> messaggi = config.getMessages(comando);
+        }
     }
 }
