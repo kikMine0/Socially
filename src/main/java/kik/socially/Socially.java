@@ -8,6 +8,8 @@ public final class Socially extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
         ConfigManager config = new ConfigManager(this);
+        CommandManager cmdmanager = new CommandManager(this);
+        cmdmanager.registraCMDS();
     }
 
     @Override
