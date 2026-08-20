@@ -22,6 +22,6 @@ public class ConfigManager {
         return configurazione.getConfigurationSection("socials");
     }
     public List<String> getMessages(String social){
-        return configurazione.getStringList(social);
+        return configurazione.getStringList("socials."+social);
     }
 }
