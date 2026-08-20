@@ -17,8 +17,8 @@ public class ConfigManager {
         plugin.reloadConfig();
         this.configurazione = plugin.getConfig();
     }
-    public List<String> getSocials(){
-        return configurazione.getStringList("socials");
+    public ConfigurationSection getSocials(){
+        return configurazione.getConfigurationSection("socials");
     }
     public List<String> getMessages(String social){
         return configurazione.getStringList(social);
