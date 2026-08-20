@@ -6,7 +6,8 @@ public final class Socially extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        saveDefaultConfig();
+        ConfigManager config = new ConfigManager(this);
     }
 
     @Override
