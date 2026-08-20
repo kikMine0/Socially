@@ -4,3 +4,7 @@
 #
 #
 #
+commands:
+  discord:
+    - "Entra ora nel <blue>discord&r! "
+    - "<click:open_url:'INSERT.URL.HERE'>https://discord.gg/INVITE</click>"
