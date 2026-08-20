@@ -10,7 +10,10 @@ socials:
     - "This is message &c#1"  # You can use Legacy formatting
     - "<click:open_url:'http://i-am-an.url'>This is message #2</click>" # Or use MiniMessage
 ```
+After doing all the changes, run the command 
+`/socially reload`
 
+And you should be all good!
 
 ## What is available
 |  | Is supported? | 
