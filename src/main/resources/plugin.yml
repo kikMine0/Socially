@@ -1,0 +1,7 @@
+name: Socially
+version: '${version}'
+
+main: kik.socially.Socially
+paper-plugin-loader: kik.socially.SociallyLoader
+api-version: '1.20'
+load: STARTUP
