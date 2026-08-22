@@ -32,5 +32,6 @@ public class CommandManager {
             cmdregistrati.put(comando,ccomando);
 
         }
+        plugin.getLogger().info("Registrati " + cmdregistrati.size() + " social!");
     }
 }
