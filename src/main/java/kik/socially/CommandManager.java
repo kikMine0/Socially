@@ -34,4 +34,25 @@ public class CommandManager {
         }
         plugin.getLogger().info("Registrati " + cmdregistrati.size() + " social!");
     }
+    @SuppressWarnings("unchecked")
+    public void deregistraTutti(){
+        if (cmdregistrati.isEmpty()) return;
+        try{
+            Field CAMPOcomandiconosciuti = SimpleCommandMap.class.getDeclaredField("knownCommands"); // prende tutti i comandi registrati nel server
+            CAMPOcomandiconosciuti.setAccessible(true); // rende accessibile perché è protetto
+            Map<String, Command> comandiConosciuti = (Map<String, Command>) CAMPOcomandiconosciuti.get(commandMap); // prendiamo solo i comandi registrati nostri
+
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void reload() {
+        deregistraTutti();
+        plugin.reloadConfig();
+        registraCMDS();
+
+        for (Player p : Bukkit.getOnlinePlayers()) {
+            p.updateCommands();
+        }
+    }
 }
