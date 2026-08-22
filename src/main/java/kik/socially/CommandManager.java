@@ -41,7 +41,11 @@ public class CommandManager {
             Field CAMPOcomandiconosciuti = SimpleCommandMap.class.getDeclaredField("knownCommands"); // prende tutti i comandi registrati nel server
             CAMPOcomandiconosciuti.setAccessible(true); // rende accessibile perché è protetto
             Map<String, Command> comandiConosciuti = (Map<String, Command>) CAMPOcomandiconosciuti.get(commandMap); // prendiamo solo i comandi registrati nostri
-
+            for (Map.Entry<String, Command> comando : cmdregistrati.entrySet()){
+                comando.getValue().unregister(commandMap); // deregistriamo il comando
+                comandiConosciuti.remove(comando.getKey()); // togliamo
+                comandiConosciuti.remove(plugin.getName().toLowerCase()+":"+comando.getKey()); // togliamo /socially:[social]
+            }
         } catch (NoSuchFieldException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
