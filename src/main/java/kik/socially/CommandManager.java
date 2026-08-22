@@ -27,6 +27,10 @@ public class CommandManager {
 
         for (String comando : entrate.getKeys(false)){
             List<String> messaggi = config.getMessages(comando);
+            CmdExecutor ccomando = new CmdExecutor(comando, messaggi);
+            commandMap.register(plugin.getName().toLowerCase(), ccomando);
+            cmdregistrati.put(comando,ccomando);
+
         }
     }
 }
