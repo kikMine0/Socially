@@ -17,6 +17,9 @@ public class CmdExecutor extends Command {
     public boolean execute(CommandSender sender, String label, String[] args) {
         for (String riga : righe) {
             sender.sendMessage(riga);
+            /// ora in realtà DOVREI fare tutta la conversione legacy -> adventure api -> legacy -> mi sbatto i coglioni su i pescepalla
+            /// ma lo faccio per ultimo o lo copio dai miei progetti
+
         }
         return true;
     }
